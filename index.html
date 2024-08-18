@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Equipos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cotizador-container">
+        <h1>Cotizador de Equipos</h1>
+        <div class="cotizador-form">
+            <label for="modelo">Seleccione el modelo:</label>
+            <select id="modelo" name="modelo">
+                <!-- Las opciones se generarán dinámicamente -->
+            </select>
+
+            <label for="sensores">Seleccione la cantidad de sensores:</label>
+            <select id="sensores" name="sensores">
+                <!-- Las opciones se generarán dinámicamente -->
+            </select>
+
+            <button id="calcular">Calcular Precio</button>
+        </div>
+
+        <div class="resultado">
+            <p>El precio es: <span id="precio"></span></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
