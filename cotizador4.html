@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortes surco por surco</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cotizador-container" id="cotizador-container">
+        <!-- Inserta tu logo aquí -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <h1>Cortes surco por surco (Lista 824)</h1>
+        <form class="cotizador-form">
+            <label for="modelo">Modelo:</label>
+            <select id="modelo"></select>
+
+            <label for="embragues">Cantidad de embragues:</label>
+            <select id="embragues"></select>
+
+            <button type="button" id="calcular">Calcular precio</button>
+        </form>
+        <div class="resultado">
+            <p><span id="precio">USD 0.00</span></p>
+            <p class="descripcion" id="descripcion">Instalación e IVA (10,5%) incluidos. Contado: 10% de descuento sobre el precio de lista. FINANCIACIÓN: en pesos desde 0 hasta 120 días sin interés, y en dólares ajustables desde 0 hasta 12 meses.</p>
+        </div>
+        <!-- Botón para capturar la pantalla y compartir en WhatsApp -->
+        <button id="shareBtn">Compartir por WhatsApp</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script4.js"></script>
+</body>
+</html>

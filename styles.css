@@ -7,23 +7,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #333;
 }
 
-/* Contenedor principal del cotizador */
-.cotizador-container {
+/* Contenedor principal para la home */
+.home-container {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
     max-width: 400px;
-    width: 100%;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+/* Título de la home */
+.home-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Enlaces a los cotizadores */
+.cotizador-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cotizador-link {
+    background-color: #016533;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cotizador-link:hover {
+    background-color: #016533;
+}
+
+/* Estilo para las páginas de cotizadores */
+.cotizador-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 10px;
 }
 
 /* Título del cotizador */
 .cotizador-container h1 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 20px;
     color: #2c3e50;
     text-align: center;
@@ -52,12 +95,13 @@ body {
     border-radius: 5px;
     background-color: #f8f8f8;
     color: #2c3e50;
+    width: 100%;
 }
 
 /* Estilo del botón calcular */
 button#calcular {
     padding: 12px;
-    background-color: #27ae60; /* Verde principal */
+    background-color: #016533;
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,34 +109,76 @@ button#calcular {
     font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 button#calcular:hover {
-    background-color: #218c53; /* Verde oscuro al pasar el mouse */
+    background-color: #014d2a;
 }
 
 /* Estilo del resultado del precio */
 .resultado p {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
 }
 
 #precio {
-    color: #27ae60; /* Verde principal para el precio */
-    font-size: 24px;
+    color: #27ae60;
+    font-size: 22px;
+}
+
+/* Botón de compartir en WhatsApp */
+button#shareBtn {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button#shareBtn:hover {
+    background-color: #1ebc5a;
 }
 
 /* Detalle adicional para una estética más pulida */
-.cotizador-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 4px;
-    background-color: #27ae60;
-    border-radius: 2px;
+.logo-container {
+    margin-bottom: 20px;
+    text-align: center; /* Asegura que el logo esté centrado */
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .cotizador-container {
+        padding: 15px;
+    }
+    .cotizador-container h1 {
+        font-size: 20px;
+    }
+    button#calcular {
+        font-size: 14px;
+        padding: 10px;
+    }
+    button#shareBtn {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #precio {
+        font-size: 22px;
+    }
+    .logo {
+        max-width: 80%; /* Ajuste para dispositivos móviles */
+    }
 }
